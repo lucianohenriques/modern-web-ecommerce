@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechStore - projeto acadêmico de e-commerce com API pública.">
+  <title>TechStore | E-commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="cabecalho">
+  <div class="container topo">
+    <a class="logo" href="#inicio" aria-label="TechStore - início">TechStore</a>
+    <nav aria-label="Navegação principal">
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="acoes">
+      <button id="botao-tema" class="botao-secundario" type="button">🌙 Modo escuro</button>
+      <button id="botao-carrinho" class="botao-secundario" type="button"
+        aria-controls="painel-carrinho" aria-expanded="false">
+        🛒 Carrinho <span id="contador-carrinho" aria-live="polite">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="container">
+      <p class="destaque">Tecnologia para o seu dia a dia</p>
+      <h1>Encontre produtos em nossa vitrine digital</h1>
+      <p>Os produtos são carregados dinamicamente da API pública DummyJSON utilizando JavaScript e fetch().</p>
+      <a class="botao-principal" href="#produtos">Ver produtos</a>
+    </div>
+  </section>
+
+  <section id="produtos" class="secao" aria-labelledby="titulo-produtos">
+    <div class="container">
+      <div class="titulo-secao">
+        <div><p class="destaque">Catálogo</p><h2 id="titulo-produtos">Produtos</h2></div>
+        <p id="status-api" role="status" aria-live="polite">Carregando produtos...</p>
+      </div>
+
+      <div class="ferramentas">
+        <div>
+          <label for="pesquisa">Pesquisar produtos</label>
+          <input id="pesquisa" type="search" placeholder="Digite um nome ou categoria..." autocomplete="off">
+        </div>
+        <div>
+          <label for="categoria">Categoria</label>
+          <select id="categoria"><option value="todas">Todas</option></select>
+        </div>
+      </div>
+
+      <div id="lista-produtos" class="grade-produtos" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="contato" class="secao contato" aria-labelledby="titulo-contato">
+    <div class="container contato-conteudo">
+      <div>
+        <p class="destaque">Atendimento</p>
+        <h2 id="titulo-contato">Contato</h2>
+        <p>Projeto acadêmico demonstrativo de Modern Web.</p>
+      </div>
+      <address>
+        <strong>TechStore</strong><br>
+        Atendimento online<br>
+        <a href="mailto:contato@techstore.exemplo">contato@techstore.exemplo</a>
+      </address>
+    </div>
+  </section>
+</main>
+
+<aside id="painel-carrinho" class="painel-carrinho" aria-labelledby="titulo-carrinho" hidden>
+  <div class="painel-topo">
+    <h2 id="titulo-carrinho">Seu carrinho</h2>
+    <button id="fechar-carrinho" class="botao-fechar" type="button" aria-label="Fechar carrinho">×</button>
+  </div>
+  <div id="itens-carrinho"></div>
+  <div class="resumo-carrinho">
+    <p>Total: <strong id="total-carrinho">R$ 0,00</strong></p>
+    <button id="limpar-carrinho" class="botao-secundario" type="button">Limpar carrinho</button>
+  </div>
+</aside>
+
+<footer>
+  <div class="container rodape">
+    <p>&copy; <span id="ano-atual"></span> TechStore. Projeto acadêmico.</p>
+    <p id="data-hora"></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
