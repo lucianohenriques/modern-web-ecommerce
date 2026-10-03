@@ -1,0 +1,27 @@
+ATIVIDADE FINAL – MODERN WEB
+Projeto: TechStore – E-commerce com API + JavaScript + Clean Code
+
+Arquivos principais:
+- index.html
+- style.css
+- script.js
+
+Implementado:
+- HTML semântico e acessibilidade básica
+- Layout responsivo
+- Produtos carregados dinamicamente pela DummyJSON Products API com fetch()
+- Tratamento de erro da API
+- Pesquisa e filtro por categoria
+- Carrinho com quantidade e total
+- Carrinho persistido em localStorage
+- Tema claro/escuro persistido em localStorage
+- Data e hora em tempo real
+- Clean Code e reflexão obrigatória ao final do script.js
+
+Para testar:
+Extraia o ZIP e abra index.html com internet ativa. Se o navegador restringir
+requisições ao abrir arquivos locais, execute a pasta por um servidor local,
+como o Live Server do VS Code.
+
+Observação:
+Este é um projeto acadêmico demonstrativo. Os dados vêm de uma API pública.
